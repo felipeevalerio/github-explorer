@@ -1,4 +1,10 @@
-const title = "TesteTitle"
+import { RepositoryItem } from "./RepositoryItem"
+
+const repository = {
+    name:"japeta-repository",
+    description:"LALALALLALA",
+    link:"https://github.com/felipeevalerio/github-explorer"
+}
 
 export function RepositoryList(){
     return (
@@ -6,28 +12,10 @@ export function RepositoryList(){
             <h1>Lista de Repositórios</h1>
 
             <ul>
-                <li>
-                    <strong>{title}</strong>
-                    <p>Forms em React</p>
-
-                    <a href="">Acessar repositório</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <strong>unform</strong>
-                    <p>Forms em React</p>
-
-                    <a href="">Acessar repositório</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <strong>unform</strong>
-                    <p>Forms em React</p>
-
-                    <a href="">Acessar repositório</a>
-                </li>
+                <RepositoryItem repository={repository}/>
+                <RepositoryItem repository={repository}/>
+                <RepositoryItem repository={repository}/>
+                <RepositoryItem repository={repository}/>
             </ul>
         </section>
     )
